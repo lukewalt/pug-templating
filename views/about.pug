@@ -1,16 +1,13 @@
 extend index.pug
  
 block content
-  nav.main-nav
-    ul
-      li.nav-link: a(href="/") home
-      li.nav-link: a(href="/inventory") inventory
   
   img.logo(src="https://www.thredbo.com.au/wp-content/uploads/2012/06/TheBakery_logo.png" alt="logo")
   
   h1 About The Bakery
-  h4 Baking your ideas to life
+  h3 ~ Baking your ideas to life ~
   
-  p
-    I am a person who loves baking things and have a rich history of life experiences where I did a bunch of cool stuff
+  - let today = new Date()
+  p.todate Today - #{today} - we have no food left
+  p I am a person who loves baking things and have a rich history of life experiences where I did a bunch of cool stuff
   

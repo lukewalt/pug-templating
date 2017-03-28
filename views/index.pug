@@ -4,12 +4,9 @@ html
     title pug demo
     include stylesheets.pug
   body
+    include nav
     
     block content 
-      nav.main-nav
-        ul
-          li.nav-link: a(href="/about") about 
-          li.nav-link: a(href="/inventory") inventory
           
       img.logo(src="https://www.thredbo.com.au/wp-content/uploads/2012/06/TheBakery_logo.png" alt="logo")
       

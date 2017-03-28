@@ -56,6 +56,10 @@ a:hover {
   margin-right: 5%;
 }
 
+.todate {
+  color: #488196;
+}
+
 .footer-nav {
   height: 50px;
   line-height: 50px;

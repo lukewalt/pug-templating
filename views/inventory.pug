@@ -1,0 +1,13 @@
+extend index.pug
+ 
+block content
+    h1 Inventory of The Bakery
+    img.logo(src="../img/logo.png" alt="logo")
+    
+    h4 Baking your ideas to life
+    
+    .inventory 
+      ul
+        each item, index in inventory
+          li index + ' : ' + #{item}
+    

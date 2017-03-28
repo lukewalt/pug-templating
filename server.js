@@ -1,21 +1,22 @@
 'use strict';
 
 const express = require('express');
-
 const app = express();
+
+app.use(express.static('public'))
 
 app.set('view engine', 'pug')
 
-const names = ['larry', 'moe', 'curly', 'mr.rogers']
+const inventory = ['chocolate cake', 'cupcake', 'crescant', 'bagel', 'muffin']
 // pug uses whitespace and indentation DEPENDENT
 
 app.get('/', (req, res, next) => {
   //renders pug templ to html: obj holding data to be injected into template
-  res.render('index', {subtitle: "this came from my JS data", names, loggedIn: false})
+  res.render('index', {subtitle: "this came from my JS data", loggedIn: false})
 })
 
-app.get('/article', (req, res, next) => {
-  res.render('article', {subtitle: "this came from my JS data", names, loggedIn: false})
+app.get('/inventory', (req, res, next) => {
+  res.render('inventory', {subtitle: "this came from my JS data", inventory, loggedIn: false})
 })
 
 const port = process.env.PORT || 3000

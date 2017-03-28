@@ -1,0 +1,13 @@
+extend index.pug
+ 
+block content
+  
+  img.logo(src="https://www.thredbo.com.au/wp-content/uploads/2012/06/TheBakery_logo.png" alt="logo")
+  
+  h1 Popular Inventory
+  
+  .goods 
+    ul
+      each item, index in goods
+        li #{index} : #{item.name} : #{item.price}
+  

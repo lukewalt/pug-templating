@@ -5,10 +5,9 @@ block content
   img.logo(src="https://www.thredbo.com.au/wp-content/uploads/2012/06/TheBakery_logo.png" alt="logo")
   
   h1 Popular Inventory
-  h4 Baking your ideas to life
   
-  .inventory 
+  .goods 
     ul
-      each item, index in inventory
-        li #{index} : #{item}
+      each item, index in goods
+        li #{index} : #{item.name} : #{item.price}
   

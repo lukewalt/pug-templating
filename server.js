@@ -7,20 +7,20 @@ app.use(express.static('public'))
 
 app.set('view engine', 'pug')
 
-const inventory = ['chocolate cake', 'cupcake', 'crescant', 'bagel', 'muffin']
+const goods = [{name: 'chocolate cake', price: 15.23}, {name: 'cupcake', price: 3.99}, {name: 'crescant', price: 4.23}, {name: 'bagel', price: 2.23}, {name: 'muffin', price: 5.23}]
 // pug uses whitespace and indentation DEPENDENT
 
 app.get('/', (req, res, next) => {
   //renders pug templ to html: obj holding data to be injected into template
-  res.render('index', { loggedIn: false })
+  res.render('index', { home: true, inventory: false, about: false })
 })
 
 app.get('/inventory', (req, res, next) => {
-  res.render('inventory', { inventory, loggedIn: false })
+  res.render('inventory', { goods, home: false, inventory: true, about: false })
 })
 
 app.get('/about', (req, res, next) => {
-  res.render('about', { loggedIn: false })
+  res.render('about', { home: false, inventory: false, about: true })
 })
 
 const port = process.env.PORT || 3000

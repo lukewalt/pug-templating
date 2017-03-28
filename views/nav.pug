@@ -1,4 +1,17 @@
-nav.main-nav
-  ul
-    li.nav-link: a(href="/about") about 
-    li.nav-link: a(href="/inventory") inventory
+if home 
+  nav.main-nav
+    ul
+      li.nav-link: a(href="/about") about 
+      li.nav-link: a(href="/inventory") inventory
+
+else if about
+  nav.main-nav
+    ul
+      li.nav-link: a(href="/") home 
+      li.nav-link: a(href="/inventory") inventory
+else 
+  nav.main-nav
+    ul
+      li.nav-link: a(href="/") home 
+      li.nav-link: a(href="/about") about
+  

@@ -12,11 +12,15 @@ const inventory = ['chocolate cake', 'cupcake', 'crescant', 'bagel', 'muffin']
 
 app.get('/', (req, res, next) => {
   //renders pug templ to html: obj holding data to be injected into template
-  res.render('index', {subtitle: "this came from my JS data", loggedIn: false})
+  res.render('index', { loggedIn: false })
 })
 
 app.get('/inventory', (req, res, next) => {
-  res.render('inventory', {subtitle: "this came from my JS data", inventory, loggedIn: false})
+  res.render('inventory', { inventory, loggedIn: false })
+})
+
+app.get('/about', (req, res, next) => {
+  res.render('about', { loggedIn: false })
 })
 
 const port = process.env.PORT || 3000

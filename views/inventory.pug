@@ -1,13 +1,19 @@
 extend index.pug
  
 block content
-    h1 Inventory of The Bakery
-    img.logo(src="../img/logo.png" alt="logo")
-    
-    h4 Baking your ideas to life
-    
-    .inventory 
-      ul
-        each item, index in inventory
-          li index + ' : ' + #{item}
-    
+  
+  nav.main-nav
+    ul
+      li.nav-link: a(href="/") home 
+      li.nav-link: a(href="/about") about
+  
+  img.logo(src="https://www.thredbo.com.au/wp-content/uploads/2012/06/TheBakery_logo.png" alt="logo")
+  
+  h1 Popular Inventory
+  h4 Baking your ideas to life
+  
+  .inventory 
+    ul
+      each item, index in inventory
+        li #{index} : #{item}
+  

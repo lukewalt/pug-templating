@@ -1,0 +1,69 @@
+body {
+  text-align: center;
+  font-family: sans-serif;
+  background: linear-gradient(#488196, white);
+  height: 100%;
+  margin: 0;
+  font-family: 'Coustard', serif;
+  color: #444;
+}
+
+
+p {
+  margin: 5%;
+  padding: 0 15%;
+  line-height: 1.5em;
+}
+
+ul {
+  text-align: left;
+}
+
+.goods {
+  margin: 0 40%;
+}
+
+li {
+  list-style-type: none;
+
+}
+
+a {
+  text-decoration: none;
+  color: #2c4b60;
+}
+a:hover {
+  text-decoration: none;
+  color: #d88e0e;
+}
+
+.logo {
+  height: 150px;
+  margin-top: 1%;
+}
+
+.store {
+  height: 450px;
+  border: 3px solid #d88e0e;
+}
+
+.main-nav {
+  padding: 2% 5% 0;
+}
+
+.nav-link {
+  display: inline;
+  margin-right: 5%;
+}
+
+.todate {
+  color: #488196;
+}
+
+.footer-nav {
+  height: 50px;
+  line-height: 50px;
+  margin-top: 50px;
+  padding: 2px 20px;
+  background-color: #fff;
+}
